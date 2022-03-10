@@ -80,10 +80,10 @@ RUN apt-get update && \
    apt-get clean && rm -f /usr/share/applications/x11vnc.desktop
 
 # Download and install Slicer and SlicerDMRI
-RUN curl -sSL https://slicer.kitware.com/midas3/download/bitstream/1023242 -o Slicer-4.10.2-linux-amd64.tar.gz && \
+RUN curl -sSL https://slicer-packages.kitware.com/api/v1/item/60add733ae4540bf6a89c030/download -o Slicer-4.10.2-linux-amd64.tar.gz && \
     tar -xzf Slicer-4.10.2-linux-amd64.tar.gz -C . && \
     rm -fr Slicer-4.10.2-linux-amd64.tar.gz
-RUN curl -sSL https://slicer.kitware.com/midas3/download/bitstream/1339540 -o 28257-linux-amd64-SlicerDMRI-git15a914a-2020-08-05.tar.gz && \
+RUN curl -sSL https://slicer-packages.kitware.com/api/v1/file/60b865a53987204c4bf54329/download -o 28257-linux-amd64-SlicerDMRI-git15a914a-2020-08-05.tar.gz && \
     tar -xzf 28257-linux-amd64-SlicerDMRI-git15a914a-2020-08-05.tar.gz -C . && \
     rsync -r 28257-linux-amd64-SlicerDMRI-git15a914a-2020-08-05/ Slicer-4.10.2-linux-amd64/ && \
     rm -fr 28257-linux-amd64-SlicerDMRI-git15a914a-2020-08-05*
