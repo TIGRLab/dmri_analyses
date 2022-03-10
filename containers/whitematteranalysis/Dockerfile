@@ -40,7 +40,7 @@ ENV PATH="/usr/local/miniconda/bin:$PATH" \
     PYTHONNOUSERSITE=1
 
 # Install whitematteranalysis package
-RUN pip install git+https://github.com/SlicerDMRI/whitematteranalysis.git@3b1a57b1e7593ab99496851de17c61e33758a45b
+RUN pip install git+https://github.com/SlicerDMRI/whitematteranalysis.git@5131fe67a12a0a763e7a3cee50198f96ea915914
 
 WORKDIR /src
 
